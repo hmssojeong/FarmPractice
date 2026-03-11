@@ -10,6 +10,13 @@ public class GameGrid : MonoBehaviour
 
     public bool gotGrid;
 
+    public GameObject hitted;
+    public GameObject field;
+
+    private RaycastHit _Hit;
+
+    public bool creatingFields;
+
     private void Start()
     {
         for(int i =0; i<columnLength*rowLength; i++)
@@ -26,5 +33,31 @@ public class GameGrid : MonoBehaviour
 
             gotGrid = true;
         }
+
+        if(Input.GetMouseButtonDown(0))
+        {
+            if(Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out _Hit))
+            {
+                if(creatingFields == true)
+                {
+                    if(_Hit.transform.tag == "grid")
+                    {
+                        hitted = _Hit.transform.gameObject;
+                        Destroy(hitted);
+                        Instantiate(field, hitted.transform.position, Quaternion.identity);
+                    }
+                }
+            }
+        }
+    }
+
+    public void CreateFields()
+    {
+        creatingFields = true;
+    }
+
+    public void returnToNormality()
+    {
+        creatingFields = false;
     }
 }

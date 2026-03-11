@@ -461,13 +461,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef72bd383129bd84889dc8925916c0c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameGrid
-  columnLength: 0
-  rowLength: 0
-  x_Space: 0
-  z_Space: 0
-  grass: {fileID: 0}
+  columnLength: 25
+  rowLength: 25
+  x_Space: 2
+  z_Space: 2
+  grass: {fileID: 5944838163135995198, guid: 6621416a54189154f95abf5e6e03ea25, type: 3}
   currentGrid: []
   gotGrid: 0
+  hitted: {fileID: 0}
+  field: {fileID: 7481856958839558304, guid: 178507f59970f2944866f353c98ebb97, type: 3}
+  creatingFields: 1
 --- !u!4 &882204569
 Transform:
   m_ObjectHideFlags: 0
