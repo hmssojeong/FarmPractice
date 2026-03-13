@@ -840,6 +840,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: FieldWet
       objectReference: {fileID: 0}
+    - target: {fileID: 2887014330718542858, guid: 0852085f51b666a4d97c488c94def0f5, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
